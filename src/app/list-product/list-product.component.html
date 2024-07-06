@@ -1,0 +1,19 @@
+<h1>List of product</h1>
+
+<table class="table tale-striped">
+  <thead>
+    <th scope="col">Name</th>
+    <th scope="col">Category</th>
+    <th scope="col">Unit</th>
+    <th scope="col">Unitary Price</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product in products">
+      <td>{{product[0]}}</td>
+      <td>{{product[1]}}</td>
+      <td>{{product[2]}}</td>
+      <td>{{product[3]}}</td>
+    </tr>
+  </tbody>
+
+</table>
