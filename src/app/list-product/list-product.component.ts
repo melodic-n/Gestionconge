@@ -1,6 +1,6 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-
+import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-list-product',
@@ -18,5 +18,12 @@ products = [
   ["cheese","dairy", 100 ,3],
   ["short","clothing",11 , 10.5]
 ]
-
+constructor(config: NgbModalConfig,
+  private modalService: NgbModal){
+    config.backdrop = 'static';
+		config.keyboard = false;
+  }
+open(content: any) {
+  this.modalService.open(content);
+}
 }
