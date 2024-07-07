@@ -1,14 +1,14 @@
-import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { ListProductComponent } from './list-product/list-product.component';
+import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ListProductComponent } from "./list-product/list-product.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet,NgFor,ListProductComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
+    imports: [RouterOutlet,RouterLink, CommonModule, ListProductComponent]
 })
 export class AppComponent {
   title = 'inventory_sys';

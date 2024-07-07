@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-list-product',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,NgFor],
   templateUrl: './list-product.component.html',
   styleUrl: './list-product.component.css'
 })
@@ -18,21 +18,5 @@ products = [
   ["cheese","dairy", 100 ,3],
   ["short","clothing",11 , 10.5]
 ]
-
-ListProductComponent( ){
-
-}
-ngOnInit(){
-  this.showProducts();
-}
-
-showProducts(){
-  return this.products;
-}
-
-
-showProductsByCategory(){
-
-}
 
 }
